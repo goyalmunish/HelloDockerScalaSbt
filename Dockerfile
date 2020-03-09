@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-ENV SBT_VERSION 0.13.15
+ENV SBT_VERSION 1.3.8
 
 RUN \
   apt-get update -y && \
