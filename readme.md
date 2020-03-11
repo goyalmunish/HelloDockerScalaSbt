@@ -90,22 +90,12 @@ A **container** is a runtime instance of an image – what the image becomes in 
 
 Now run the build command to create a Docker image. We tag it using `-t` so it has a friendly name and version.
 
-    $ docker build -t hello_world:v1 .
-    ... 
-    Successfully built 8508c6ecdf78
-    Successfully tagged hello_world:v1
-
-The built image is in the machine’s local Docker image registry. We can list them via the docker images commend:
-
-    $ docker images
-    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-    hello_world         v1                  2c43052fd1c5        8 minutes ago       774 MB
-    openjdk             8                   ab0ecda9094c        11 days ago         610 MB
-    ➜  ~ 
+    # docker build . -t goyalmunish/hello-docker-scala-sbt:latest
+    # docker push goyalmunish/hello-docker-scala-sbt:latest
 
 Finally, run the app in the container:
 
-    $ docker run hello_world:v1
+    $ docker run -it --name hello-docker-scala-sbt goyalmunish/hello-docker-scala-sbt:latest
     [info] Loading project definition from /HelloWorld/project
     ...
     [info]   Compilation completed in 9.433 s
